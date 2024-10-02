@@ -1,10 +1,10 @@
 # PREDICTING DIFFERENT CLOTHES USING PYTORCH
 
 # Table of content
-- Objective
-- Data Source
-- Procedure
-- Usage
+- [Objective](#objective)
+- [Data Source](#data)
+- [Procedure](#procedure)
+- [Usage](#usage)
 
 # Objective
 In this project I have created a ML model which will predict different clothes given in FashionMNIST database leveraging the power of PyTorch. If we input a greyscaled image of size 28x28 in the form of tensor the model will predict the cloth item with an accuracy around 88%-90%.
@@ -24,6 +24,9 @@ For this project we have used the fashionMNSIT data which is available at torchv
 
     The model was trained using nearly 86% of the data and divided the data into batch of size 32.
     The loss function used was Cross Entropy and we used stochastic gradient descent optimizer.
+    To train the model we have used Convolution Neural Network with TinyVGG architecture
+
+    ![TinyVGG](https://miro.medium.com/v2/resize:fit:1400/1*3ZkXJ-nIajuY3iX27w12aw.png)
 - **Model Evaluation**
 
     The Performance of the model was done using Torchmetrics accuracy and by creating.
@@ -31,6 +34,7 @@ For this project we have used the fashionMNSIT data which is available at torchv
     
     ![prediction](images/output_img.png)
 
+    confusion matrix
     ![confusionmatrix](images/confusion.png)
 
 # Usage
