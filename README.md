@@ -35,6 +35,8 @@ For this project we have used the fashionMNSIT data which is available at torchv
     ![prediction](images/output_img.png)
 
     confusion matrix
+
+  
     ![confusionmatrix](images/confusion.png)
 
 # Usage
