@@ -49,6 +49,8 @@ class FashionMNISTModelV0(nn.Module):
     return X
   
 
+device = "cuda" if torch.cuda.is_available() else "cpu"
+
 def make_prediction(model: torch.nn.Module,
                            img: torch.tensor
                            ):
@@ -57,6 +59,6 @@ def make_prediction(model: torch.nn.Module,
   returns value from 0 to 9 which represents a label class 
   of the data. Refer to data for more clarity
   """
-  pred_logits = model(img.unsqueeze(dim = 0))
+  pred_logits = model(img.to(device).unsqueeze(dim = 0)).to(device)
   pred_probs = pred_logits.argmax(dim = 1)
   return pred_probs
